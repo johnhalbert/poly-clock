@@ -21,6 +21,9 @@
   <!-- App:Main -->
   <script src="poly-clock.js"></script>
 
+  <!-- App:Config -->
+  <script src="config/routeConfig.js"></script>
+
   <!-- App:Controller -->
   <script src="clock/clockCtrl.js"></script>
   <script src="alarm/alarmCtrl.js"></script>
@@ -29,9 +32,11 @@
 </head>
 <body>
 
-  <div ng-include="'partial/header.html'"></div>
-  <div ng-view></div>
-  <div ng-include="'partial/footer.html"></div>
+  <div class="container">
+    <div ng-include="'partial/header.html'"></div>
+    <div ng-view></div>
+    <div ng-include="'partial/footer.html'"></div>
+  </div>
 
 </body>
 </html>
