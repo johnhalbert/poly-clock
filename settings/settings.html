@@ -1,0 +1,69 @@
+<div id="pc-settings-view">
+  <div id="pc-settings-view-header">
+  <h1>Poly Clock Settings</h1>
+  </div>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Adjust scheduled alarms when you use sleep now button?</td>
+        <td>
+          <div class="three">
+            <div class="button-wrap" id="button-wrap">
+              <div class="button-bg">
+                <div class="button-out"></div>
+                <div class="button-in"></div>
+                <div class="button-switch"></div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Hour Format</td>
+        <td>
+          <select ng-options="f as f for f in settings.hourFormats" ng-model="settings.hourFormat">
+            <option value="">12/24</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Travel Mode</strong><br>Adjust scheduled alarms relative to home time zone while travelling</td>
+        <td>
+          <div class="three">
+            <div class="button-wrap" id="button-wrap">
+              <div class="button-bg">
+                <div class="button-out"></div>
+                <div class="button-in"></div>
+                <div class="button-switch"></div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Migrate</strong><br>Readjust sleep schedule gradually over time</td>
+        <td><div class="pc-settings"></div></td>
+      </tr>
+      <tr>
+        <td><strong>Upcoming Sleep Notification</strong><br>Get notified when you're approaching a scheduled sleep time</td>
+        <td>
+          <select ng-options="hm as hm for hm in settings.hoursMinutes" ng-model="settings.upcomingNotification">
+            <option value="">0:00</option>
+          </select>
+          <select ng-options="nf as nf for nf in settings.notificationFormat" ng-model="settings.upcomingNotificationFormat">
+            <option value="">Hr/Min</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Snooze Time</strong><br>Default snooze length (snoozing is for the weak!)</td>
+        <td>
+          <select ng-options="m as m for m in settings.snoozeMinutes" ng-model="settings.snoozeDuration">
+            <option value="">Min</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

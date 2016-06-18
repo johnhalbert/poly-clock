@@ -1,0 +1,320 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/* Cogwheel part of glyphicons basic set - http://glyphicons.com */
+.pc-settings {
+  background-image: url(../img/glyphicons-137-cogwheel.png);
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+
+#pc-settings {
+  background-image: url(../img/glyphicons-137-cogwheel.png);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: .3em;
+  top: .3em;
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+}
+
+#pc-settings a {
+  text-decoration: none;
+  color: black;
+}
+
+#pc-settings-view {
+  margin-top: 1em;
+}
+
+#pc-settings-view td {
+  padding: 1em 1em;
+}
+
+#pc-settings-view-header h1 {
+  padding-left: 2.5%;
+  margin-bottom: 0;
+} 
+#pc-settings-view-header {
+  border-bottom: 1px solid black;
+}
+
+#pc-clock {
+  margin-top: .5em;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 15px;
+}
+
+#pc-clock h1 {
+  font-size: 6em;
+}
+
+#pc-clock canvas {
+  width: 100%;
+  height: 50%;
+}
+
+#pc-sleep-now {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#pc-sleep-now-shadow {
+  display: inline-block;
+  box-shadow: 0px 0px 55px 1px rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+#pc-sleep-now-button {
+  width: 125px;
+  height: 125px;
+  box-shadow: inset 0px 0px 25px 1px rgba(0,0,0,0.175);
+  border-radius: 50%;
+  font-size: 2em;
+  font-style: italic;
+  line-height: 1;
+  padding: 35px 0px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid silver;
+}
+
+#pc-sleep-now-settings {
+  position: absolute;
+  text-align: center;
+  width: 95%;
+  margin: 0 2.5%;
+  top: 200px;
+  left: 0;
+  border: 1px solid black;
+  background-color: white;
+}
+
+#pc-upcoming {
+  max-height: 100px;
+  overflow: scroll;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+#pc-upcoming-header {
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+}
+
+#pc-upcoming-header small {
+  font-size: .85em;
+}
+
+#pc-active-alarm {
+  text-align: center;
+}
+
+#pc-alarms {
+  width: 100%;
+}
+
+.pc-alarm {
+  width: 100%;
+  /*border-bottom: 1px solid black;*/
+}
+
+.pc-alarm td {
+  text-align: center;
+}
+
+.pc-alarm-bell-icon img {
+  padding: 10%;
+  padding-bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pc-alarm-bell-icon span {
+  font-size: 3em;
+}
+
+.pc-alarm-control {
+  display: inline-block;
+  padding: 1.5em;
+}
+
+.pc-alarm-control img {
+  width: 7em;
+}
+
+#pc-nav {
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+#pc-nav-sections {
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.pc-nav-item {
+  margin: 0 10px;
+  display: inline-flex;
+}
+
+.pc-nav-item.active {
+  border-bottom: 3px solid black;
+}
+
+.pc-nav-item a {
+  color: black;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#pc-schedule p {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+#pc-schedule ul {
+  list-style-type: none;
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+}
+
+#pc-schedule table tbody tr {
+  /*display: flex;*/
+  /*align-items: content: enter;*/
+}
+
+#pc-schedule table tbody tr td {
+  padding: 0 10px;
+  border-bottom: none;
+  margin: 10px 0;
+}
+
+#pc-schedule-sections {
+  border-bottom: 1px solid black;
+}
+
+#pc-schedule-sections ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#pc-schedule-sections li {
+  padding: 3px 25px;
+  margin: 0;
+}
+
+#pc-schedule-sections li.active {
+  background-color: #ddd;
+}
+
+#pc-alarm-list li:first-child {
+  border-top: 1px solid silver;
+}
+
+#pc-alarm-list li {
+  height: 100%;
+  margin: 0;
+  padding: 5px 5px;
+  border-bottom: 1px solid silver;
+}
+
+#pc-alarm-list:after {
+  content: " ";
+  clear: both;
+}
+
+.pc-alarm-edit,
+.pc-alarm-delete {
+  float: right;
+  display: inline-flex;
+  padding-left: 10px;
+}
+
+#pc-modal {
+  text-align: center;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  border: 1px solid black;
+  background: white;
+  width: 95%;
+  margin: 0 2.5%;
+}
+
+
+/*
+look at the weird glitch on the 6th button. something to do with color vs background-color. or did i fuck up?
+*/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+/* BUTTON 3 http://codepen.io/mattbeaudry/pen/rwjIJ */
+
+.three {
+  display: inline-block;
+}
+
+.three .button-wrap {
+  width: 83px;
+  margin: 0 0 0;
+  cursor: pointer;
+}
+.three .button-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  border-radius: 40px;
+  padding: 3px;
+  color:#fff;
+  transition:all 0.2s ease;
+}
+.three .button-switch {
+  position:relative;
+  left:0px;
+  width: 11px;
+  height: 11px;
+  border:solid 13px;
+  background-color:#fff;
+  border-radius: 36px;
+  transition:all 0.2s ease;
+}
+.three .button-active .button-switch { left:50px; }
+.three .button-in, 
+.three .button-out {
+  position:absolute; 
+  transition:all 0.2s ease;
+  padding-top:15px;
+  font-size:0.8em;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+.three .button-in { margin-left:76px; }
+.three .button-out { margin-left:18px; }
+.three .button-active .button-out {  }
+.three .button-active .button-in {  }
+.three .button-active .button-bg { background-color:#000; }

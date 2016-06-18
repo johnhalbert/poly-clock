@@ -18,25 +18,28 @@
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/angular-route/angular-route.min.js"></script>
 
+  <!-- App:CSS -->
+  <link rel="stylesheet" href="css/poly-clock.css">
+
   <!-- App:Main -->
   <script src="poly-clock.js"></script>
 
   <!-- App:Config -->
   <script src="config/routeConfig.js"></script>
+  <script src="config/gestureConfig.js"></script>
 
   <!-- App:Controller -->
   <script src="clock/clockCtrl.js"></script>
   <script src="alarm/alarmCtrl.js"></script>
   <script src="schedule/scheduleCtrl.js"></script>
+  <script src="settings/settingsCtrl.js"></script>
 
 </head>
 <body>
 
-  <div class="container">
     <div ng-include="'partial/header.html'"></div>
     <div ng-view></div>
     <div ng-include="'partial/footer.html'"></div>
-  </div>
 
 </body>
 </html>

@@ -20,6 +20,14 @@ angular.module('poly-clock')
 				templateUrl: 'schedule/schedule.html',
 				controller:  'poly-clock.scheduleCtrl'
 			})
+			.when('/alarm', {
+				templateUrl: 'alarm/alarm.html',
+				controller:  'poly-clock.alarmCtrl'
+			})
+			.when('/settings/:redirect', {
+				templateUrl: 'settings/settings.html',
+				controller:  'poly-clock.settingsCtrl'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});

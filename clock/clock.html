@@ -1,1 +1,79 @@
-<div style="margin: 0 auto;text-align:center;"><h1 ng-bind="time"></h1></div>
+<div id="pc-settings" ng-click="settings()"></div>
+
+<div id="pc-nav">
+  <ul id="pc-nav-sections">
+    <li class="pc-nav-item active"><a href="#/clock">Clock</a></li>
+    <li class="pc-nav-item"><a href="#/schedule">Schedule</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <div id="pc-clock">
+    <!-- Digital Clock -->
+    <h1 
+      ng-bind="time"
+      ng-if="digital">
+    </h1>
+  </div>
+
+  <div id="pc-sleep-now" ng-click="sleep()">
+    <div id="pc-sleep-now-shadow">
+      <div id="pc-sleep-now-button">
+        Sleep<br>Now
+      </div>
+    </div>
+  </div>
+
+  <div id="pc-sleep-now-settings" ng-if="sleepNow">
+    <h3>Sleep Now</h3>
+    <label>How long?</label>
+    <select ng-options="h as h for h in sleeping.hours" ng-model="sleeping.sleepNowHours">
+      <option value="">Hr</option>
+    </select> : 
+    <select ng-options="m as m for m in sleeping.minutes" ng-model="sleeping.sleepNowMinutes">
+      <option value="">Min</option>
+    </select>
+    <label><input type="checkbox" checked="checked" /> Adjust sleep schedule based on this sleep?</label>
+    <div id="pc-sleep-now-buttons">
+      <button ng-click="startSleep()">Sleep Now!</button>
+    </div>
+  </div>
+
+  <h3 id="pc-upcoming-header">Upcoming Alarms<br /><small><em>(Next 24 Hours)</em></small></h3>
+  <div id="pc-upcoming">
+    <table id="pc-alarms">
+      <tbody>
+        <tr class="pc-alarm">
+          <td>9:20 PM</td>
+        </tr>
+        <tr class="pc-alarm">
+          <td>9:20 PM</td>
+        </tr>
+        <tr class="pc-alarm">
+          <td>9:20 PM</td>
+        </tr>
+        <tr class="pc-alarm">
+          <td>9:20 PM</td>
+        </tr>
+        <tr class="pc-alarm">
+          <td>9:20 PM</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <ul id="pc-alarms">
+      <li class="pc-alarm">9:20 PM</li>
+      <li class="pc-alarm">11:20 PM</li>
+      <li class="pc-alarm">1:20 AM</li>
+      <li class="pc-alarm">3:20 AM</li>
+      <li class="pc-alarm">5:20 AM</li>
+      <li class="pc-alarm">7:20 AM</li>
+      <li class="pc-alarm">9:20 AM</li>
+      <li class="pc-alarm">11:20 AM</li>
+      <li class="pc-alarm">1:20 PM</li>
+      <li class="pc-alarm">3:20 PM</li>
+      <li class="pc-alarm">5:20 PM</li>
+      <li class="pc-alarm">7:20 PM</li>
+      <li class="pc-alarm">9:20 PM</li>
+    </ul> -->
+  </div>
+</div>

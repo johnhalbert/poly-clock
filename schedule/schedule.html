@@ -1,0 +1,210 @@
+<div id="pc-settings" ng-click="settings()"></div>
+
+<div id="pc-nav">
+  <ul id="pc-nav-sections">
+    <li class="pc-nav-item"><a href="#/clock">Clock</a></li>
+    <li class="pc-nav-item active"><a href="#/schedule">Schedule</a></li>
+  </ul>
+</div>
+
+<div id="pc-schedule">
+  <div id="pc-schedule-sections">
+    <ul>
+      <li ng-class="{active: !alarms}" ng-click="alarms=false">Presets</li>
+      <li ng-class="{active: alarms}" ng-click="alarms=true">Alarms</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <p>Select a pre-defined schedule, or go define a custom schedule.</p>
+        
+    <table ng-if="!alarms">
+      <tbody>
+        <tr>
+          <td>Monophasic</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Segmented</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Ciesta</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Triphasic</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Everyman</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Dual-Core</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Uberman</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Dymaxion</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>SPAMAYL</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Nine to Fivers</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Custom</td>
+          <td>
+            <div class="three">
+              <div class="button-wrap" id="button-wrap">
+                <div class="button-bg">
+                  <div class="button-out"></div>
+                  <div class="button-in"></div>
+                  <div class="button-switch"></div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="pc-alarm-list" ng-if="alarms">
+      <ul>
+        <li>9:20 AM<span class="pc-alarm-delete">Delete</span><span class="pc-alarm-edit" ng-click="modal()">Edit</span></li>
+        <li>11:20 AM<span class="pc-alarm-delete">Delete</span><span class="pc-alarm-edit" ng-click="modal()">Edit</span></li>
+        <li>1:20 PM<span class="pc-alarm-delete">Delete</span><span class="pc-alarm-edit" ng-click="modal()">Edit</span></li>
+        <li>3:20 PM<span class="pc-alarm-delete">Delete</span><span class="pc-alarm-edit" ng-click="modal()">Edit</span></li>
+        <li>5:20 PM<span class="pc-alarm-delete">Delete</span><span class="pc-alarm-edit" ng-click="modal()">Edit</span></li>
+        <li>7:20 PM<span class="pc-alarm-delete">Delete</span><span class="pc-alarm-edit" ng-click="modal()">Edit</span></li>
+      </ul>
+    </div>
+
+    <div id="pc-modal" ng-if="showModal">
+      <h3>Edit Alarm</h3>
+      <label>Time</label>
+      <select ng-options="h as h for h in hours" ng-model="alarm.hours">
+        <option value="">Hr</option>
+      </select> : 
+      <select ng-options="m as m for m in minutes" ng-model="alarm.minutes">
+        <option value="">Min</option>
+      </select>
+      <select ng-options="p as p for p in periods" ng-model="alarm.periods">
+        <option value="">AM/PM</option>
+      </select>
+
+      <div id="pc-modal-controls">
+        <button ng-click="cancel()">Cancel</button>
+        <button ng-click="save()">Okay</button>
+      </div>
+    </div>
+  </div>
+</div>
